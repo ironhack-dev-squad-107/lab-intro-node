@@ -106,4 +106,27 @@ describe('SortedList', function() {
       assert.equal(sl.average(), 100);
     })
   });
+
+  describe('sum()', function(){
+    var sl;
+    beforeEach(function(){
+      sl = new SortedList();
+    });
+
+    it('should return a EmptySortedList exception if there are no elements in the list', function() {
+      try {
+        sl.sum()
+      } catch (e) {
+        assert.equal(e instanceof Error, true);
+        assert.equal(e.message, "EmptySortedList");
+      }
+    })
+
+    it('should add(sum) all elements of the array if there are elements in the list', function() {
+      sl.add(1);
+      sl.add(2);
+      sl.add(3);
+      assert.equal(sl.sum(), 6);
+    });
+  });
 });
