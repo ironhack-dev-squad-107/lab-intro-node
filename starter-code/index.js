@@ -18,4 +18,13 @@ SortedList.prototype.get = function(pos) {
   return this.items[pos-1];
 }
 
+SortedList.prototype.sum = function() {
+  if (this.items.length === 0) {
+    throw new Error('EmptySortedList');
+  }
+  return this.items.reduce(function(sum, ele){
+    return sum + ele;
+  }, 0);
+}
+
 module.exports = SortedList;
