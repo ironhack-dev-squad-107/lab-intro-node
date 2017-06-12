@@ -33,12 +33,16 @@ SortedList.prototype.min = function() {
 }
 
 SortedList.prototype.average = function() {
-  if (this.length === 0) {
+  return (this.sum() / this.length);
+}
+
+SortedList.prototype.sum = function() {
+  if (this.items.length === 0) {
     throw new Error('EmptySortedList');
   }
-  return this.items.reduce(function(total,elem){
-    return total+elem
-  }) / this.length;
+  return this.items.reduce(function(sum, ele){
+    return sum + ele;
+  }, 0);
 }
 
 module.exports = SortedList;
