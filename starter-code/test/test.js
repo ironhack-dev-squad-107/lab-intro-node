@@ -82,6 +82,7 @@ describe('SortedList', function() {
 
       assert.equal(sl.max(), 20);
     });
+  });
 
   describe('#average()', function() {
     var sl;
