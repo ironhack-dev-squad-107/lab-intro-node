@@ -124,4 +124,13 @@ The class will have the following methods:
 get(i) will get the ith value in the list
 You should also provide a length property that gives the length of the list.
 
-Efficiency matters!
+### Max
+
+### Min
+
+### Average
+
+### Sum
+
+
+/Happy Coding
