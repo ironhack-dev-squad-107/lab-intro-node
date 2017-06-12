@@ -18,4 +18,11 @@ SortedList.prototype.get = function(pos) {
   return this.items[pos-1];
 }
 
+SortedList.prototype.max = function() {
+  if (this.length === 0) {
+    throw new Error('EmptySortedList');
+  }
+  return Math.max.apply(Math, this.items);
+}
+
 module.exports = SortedList;

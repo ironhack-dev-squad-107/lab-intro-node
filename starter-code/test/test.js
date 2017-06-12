@@ -50,7 +50,7 @@ describe('SortedList', function() {
         assert.equal(e instanceof Error, true)
         assert.equal(e.message, "OutOfBounds")
       }
-    })
+    });
 
     it('should return the element in that position', function() {
       var foo = 10;
@@ -58,6 +58,29 @@ describe('SortedList', function() {
         sl.add(foo*i);
         assert.equal(sl.get(i), foo*i);
       }
+    });
+  });
+
+  describe('#max()', function() {
+    var sl;
+    beforeEach(function() {
+      sl = new SortedList();
+    });
+
+    it('should return an EmptyList exception if there is no element in the list', function() {
+      try {
+        sl.max();
+      } catch (e) {
+        assert.equal(e instanceof Error, true);
+        assert.equal(e.message, 'EmptySortedList');
+      }
+    });
+
+    it('should return the max element in the list', function() {
+      sl.add(10);
+      sl.add(20);
+
+      assert.equal(sl.max(), 20);
     });
   });
 });
