@@ -84,6 +84,29 @@ describe('SortedList', function() {
     });
   });
 
+  describe('#min()', function() {
+    var sl;
+    beforeEach(function() {
+      sl = new SortedList();
+    });
+
+    it('should return an EmptyList exception if there is no element in the list', function() {
+      try {
+        sl.min();
+      } catch (e) {
+        assert.equal(e instanceof Error, true);
+        assert.equal(e.message, 'EmptySortedList');
+      }
+    });
+
+    it('should return the min element in the list', function() {
+      sl.add(10);
+      sl.add(20);
+
+      assert.equal(sl.min(), 10);
+    });
+  });
+
   describe('#average()', function() {
     var sl;
     beforeEach(function(){

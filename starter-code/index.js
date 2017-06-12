@@ -25,6 +25,13 @@ SortedList.prototype.max = function() {
   return Math.max.apply(Math, this.items);
 }
 
+SortedList.prototype.min = function() {
+  if (this.length === 0) {
+    throw new Error('EmptySortedList');
+  }
+  return Math.min.apply(Math, this.items);
+}
+
 SortedList.prototype.average = function() {
   if (this.length === 0) {
     throw new Error('EmptySortedList');
