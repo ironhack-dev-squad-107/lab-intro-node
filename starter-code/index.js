@@ -18,4 +18,13 @@ SortedList.prototype.get = function(pos) {
   return this.items[pos-1];
 }
 
+SortedList.prototype.average = function() {
+  if (this.length === 0) {
+    throw new Error('EmptySortedList');
+  }
+  return this.items.reduce(function(total,elem){
+    return total+elem
+  }) / this.length;
+}
+
 module.exports = SortedList;
