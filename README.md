@@ -92,14 +92,34 @@ $ npm test
 > lab-intro-node@1.0.0 test ~~/lab-intro-node/starter-code
 > mocha
 
-  SortedList
-    #add(x)
-      ✓ should add a value to SortedList
-    #get(i)
-      ✓ should return -1 when the value is not present
+SortedList
+  Constructor
+    1) should create an empty SortedList
+  #add(x)
+    2) should add a single value to SortedList
+    3) should add a second value to SortedList, sorted
+    4) should add a third value to SortedList, sorted
+  #get(i)
+    ✓ should return an OutOfBounds exception if there is no element in that position
+    5) should return the element in that position
+  #max()
+    ✓ should return an EmptyList exception if there is no element in the list
+    6) should return the max element in the list
+  #min()
+    ✓ should return an EmptyList exception if there is no element in the list
+    7) should return the min element in the list
+  #average()
+    ✓ should return an EmptySortedList exception if there are no elements
+    8) should return the average of elements in the array
+  sum()
+    ✓ should return a EmptySortedList exception if there are no elements in the list
+    9) should add(sum) all elements of the array if there are elements in the list
 
-  2 passing (7ms)
+
+5 passing (17ms)
+9 failing
 ```
+Don't worry if these 5 tests are passing... your goal is to make them ALL PASS!! :)
 
 ## SortedList Class
 
