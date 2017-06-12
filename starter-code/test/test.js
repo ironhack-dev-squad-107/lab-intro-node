@@ -51,8 +51,8 @@ describe('SortedList', function() {
       } catch (e) {
         assert.equal(e instanceof Error, true)
         assert.equal(e.message, "OutOfBounds")
+        assert.throws(sl.get, Error, '/OutOfBounds/');
       }
-      assert.throws(sl.min, 'OutOfBounds', 'Not throwing OutOfBounds as expected');
     });
 
     it('should return the element in that position', function() {
@@ -77,7 +77,6 @@ describe('SortedList', function() {
         assert.equal(e instanceof Error, true);
         assert.equal(e.message, 'EmptySortedList');
       }
-      assert.throws(sl.min, 'EmptySortedList', 'Not throwing EmptySortedList as expected');
     });
 
     it('should return the max element in the list', function() {
@@ -101,7 +100,6 @@ describe('SortedList', function() {
         assert.equal(e instanceof Error, true);
         assert.equal(e.message, 'EmptySortedList');
       }
-      assert.throws(sl.min, 'EmptySortedList', 'Not throwing EmptySortedList as expected');
     });
 
     it('should return the min element in the list', function() {
@@ -125,7 +123,6 @@ describe('SortedList', function() {
         assert.equal(e instanceof Error, true)
         assert.equal(e.message, "EmptySortedList")
       }
-      assert.throws(sl.min, 'EmptySortedList', 'Not throwing EmptySortedList as expected');
     })
 
     it('should return the average of elements in the array', function() {
@@ -149,7 +146,6 @@ describe('SortedList', function() {
         assert.equal(e instanceof Error, true);
         assert.equal(e.message, "EmptySortedList");
       }
-      assert.throws(sl.min, 'EmptySortedList', 'Not throwing EmptySortedList as expected');
     })
 
     it('should add(sum) all elements of the array if there are elements in the list', function() {
