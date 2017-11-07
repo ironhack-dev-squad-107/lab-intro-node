@@ -129,28 +129,38 @@ The class will have the following methods:
 
 ### Constructor
 
-`new SortedList` should create a new object from the `SortedList` class. The object should be empty to start
+`new SortedList` should create a new object from the `SortedList` class. 
 
-### Size
+The object should have a `items` and `length` property. 
 
-`size()` will return the number of elements in the `SortedList` Object
+- `items` should be an array.
+- `length` should be the number of elements in the array.
 
 ### Add
 
-`add(x)` will add x to the list
+`add(x)` will add x to the items array
 
 ### Get
 
-get(i) will get the ith value in the list
+The method will get the `ith` value in the list
+
 You should also provide a length property that gives the length of the list.
 
 ### Max
 
+Should return the max value of the array
+
 ### Min
+
+Should return the max value of the array
 
 ### Average
 
+Should return the average value of the array
+
 ### Sum
+
+Should return the sum value of the array
 
 
 /Happy Coding
